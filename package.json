@@ -1,6 +1,6 @@
 {
     "name": "@tak-ps/node-p12",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "description": "Extracts the certificate and the private key from a p12/ pkcs12 file",
     "type": "module",
     "main": "lib/index.js",
@@ -14,6 +14,7 @@
     "scripts": {
         "test": "tsx --test tests/**/*.test.ts",
         "build": "tsc",
+        "prepack": "npm run build",
         "doc": "typedoc index.ts",
         "lint": "eslint src tests"
     },
