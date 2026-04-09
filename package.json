@@ -4,20 +4,20 @@
     "description": "Extracts the certificate and the private key from a p12/ pkcs12 file",
     "type": "module",
     "sideEffects": false,
-    "main": "lib/index.js",
-    "types": "lib/index.d.ts",
+    "main": "dist/index.js",
+    "types": "dist/index.d.ts",
     "exports": {
         ".": {
-            "types": "./lib/index.d.ts",
-            "import": "./lib/index.js"
+            "types": "./dist/index.d.ts",
+            "import": "./dist/index.js"
         },
         "./browser": {
-            "types": "./lib/browser.d.ts",
-            "import": "./lib/browser.js"
+            "types": "./dist/browser.d.ts",
+            "import": "./dist/browser.js"
         },
         "./node": {
-            "types": "./lib/node.d.ts",
-            "import": "./lib/node.js"
+            "types": "./dist/node.d.ts",
+            "import": "./dist/node.js"
         }
     },
     "scripts": {
@@ -42,7 +42,7 @@
     ],
     "license": "ISC",
     "files": [
-        "lib/**/*"
+        "dist/**/*"
     ],
     "engines": {
         "node": ">=24"

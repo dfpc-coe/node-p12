@@ -12,6 +12,14 @@
 
 ### Pending Fixed
 
+### v1.0.4 - 2026-04-08
+
+- :bug: Fix the browser entrypoint to ensure it doesn't rely on Node.js APIs, making it safe for browser environments
+
+### v1.0.3 - 2026-04-08
+
+- :rocket: Add a browser-specific entrypoint that re-exports the root entrypoint but with a browser-safe `convertToPem` function that doesn't rely on Node.js APIs
+
 ### v1.0.2 - 2026-04-08
 
 - :rocket: Restore the root entrypoint for Node.js consumers and expose browser-safe `convertToPem` on `@tak-ps/node-p12/browser`
