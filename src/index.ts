@@ -1,10 +1,4 @@
-import { readFileSync } from 'node:fs';
+export { convertToPem } from './lib/p12.js';
+export type { ConvertToPemResult, P12Input } from './lib/p12.js';
+export { getPemFromP12 } from './node.js';
 
-import { convertToPem } from './lib/p12.js';
-
-export const Name = (name: string) => `Hello ${name}`;
-
-export function getPemFromP12(certPath: string, password: string) {
-  const p12File = readFileSync(certPath, { encoding: 'binary' });
-  return convertToPem(p12File, password);
-}
