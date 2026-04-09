@@ -1,4 +1,4 @@
-import * as forge from 'node-forge';
+import forge from 'node-forge';
 
 export function convertToPem(p12base64: any, password: string) {
   const p12Asn1 = forge.asn1.fromDer(p12base64);
