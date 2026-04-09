@@ -1,56 +1,40 @@
-# [p12-to-pem-converter: Node.js](https://github.com/appit-online/p12-to-pem)
+<h1 align=center>Node-P12</h1>
+<p align=center>Extract PEM-encoded keys and certificates from PKCS#12 bundles</p>
 
-Convert PKCS12/.p12-files into pem key and pem certificate.
+Lightweight ESM utility for reading a `.p12` or `.pkcs12` file from disk and returning the private key, certificate, and certificate common name.
 
+## API Documentation
 
-**Table of contents:**
+Generate the API documentation locally with:
 
+```sh
+npm run doc
+```
 
-* [Quickstart](#quickstart)
-
-  * [Installing the library](#installing-the-library)
-  * [Using the library](#using-the-library)
-* [License](#license)
-
-## Quickstart
-
-### Installing the library
+## Installation
 
 ```bash
-npm install p12-pem --save
+npm install @tak-ps/node-p12
 ```
 
+## Usage
 
-### Using the library
+```ts
+import { getPemFromP12 } from '@tak-ps/node-p12';
 
-```javascript
-import * as p12 from 'p12-pem';
+const { pemKey, pemCertificate, commonName } = getPemFromP12('./client.p12', 'password');
 
-/**
- * Given a p12 file, convert it to the PEM format.
- * @param {string} pathToCert The relative path to a p12 file.
- * @param {string} password of p12 / private key.
- */
-const {pemKey, pemCertificate, commonName} = p12.getPemFromP12(certPath, password);
-console.log('The converted private key in PEM:');
-console.log(pemKey);
-
-console.log('The converted certificate in PEM:');
-console.log(pemCertificate)
-
-console.log('The extracted commonName:');
 console.log(commonName);
-
+console.log(pemKey);
+console.log(pemCertificate);
 ```
 
-## Supported Node.js Versions
+## API
 
-Our client libraries follow the [Node.js release schedule](https://nodejs.org/en/about/releases/).
-Libraries are compatible with all current _active_ and _maintenance_ versions of
-Node.js.
+### `getPemFromP12(certPath, password)`
 
-## License
+Reads a PKCS#12 bundle from disk and returns:
 
-Apache Version 2.0
-
-See [LICENSE](https://github.com/appit-online/p12-to-pem/blob/master/LICENSE)
+- `pemKey`: the private key in PEM format
+- `pemCertificate`: the certificate in PEM format
+- `commonName`: the certificate subject common name
