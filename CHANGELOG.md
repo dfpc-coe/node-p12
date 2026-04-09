@@ -12,6 +12,10 @@
 
 ### Pending Fixed
 
+### v1.0.5 - 2026-04-08
+
+- :bug: Fix Docs Generation
+
 ### v1.0.4 - 2026-04-08
 
 - :bug: Fix the browser entrypoint to ensure it doesn't rely on Node.js APIs, making it safe for browser environments

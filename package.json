@@ -24,7 +24,7 @@
         "test": "tsx --test tests/**/*.test.ts",
         "build": "tsc",
         "prepack": "npm run build",
-        "doc": "typedoc index.ts",
+        "doc": "typedoc src/index.ts",
         "lint": "eslint src tests"
     },
     "repository": {
